@@ -149,9 +149,9 @@ def calcular_tempo(tempo, bpm):
         print(f"Tempo '{tempo}' não reconhecido.")
         return None
 
-def tocar_buzzer(frequencia, tempo_segundos):
+def tocar_buzzer(frequencia, tempo_segundos, altura):
     buzzer.freq(int(frequencia))  
-    buzzer.duty_u16(500)  # MUDE AQUI A ALTURA DA MUSICA VALOR PADRÃO: 32768 
+    buzzer.duty_u16(altura)  # MUDE AQUI A ALTURA DA MUSICA VALOR PADRÃO: 32768 
     time.sleep(tempo_segundos)  
     buzzer.duty_u16(0)
 def ativarLed(index, rgb):
@@ -164,7 +164,7 @@ def acender_led(nota):
         rgb = notes[nota]["rgb"]  # Obtém a cor RGB
         ativarLed(index, rgb)
 
-def tocarNota(nota, tempo, bpm=40):
+def tocarNota(nota, tempo, bpm=40, altura):
     apagar_todos()  # Apaga todos os LEDs
 
     if nota in notes:
@@ -177,14 +177,16 @@ def tocarNota(nota, tempo, bpm=40):
                 time.sleep(tempo_segundos)
             else:
                 acender_led(nota)
-                tocar_buzzer(frequencia, tempo_segundos)
+                tocar_buzzer(frequencia, tempo_segundos, altura)
     else:
         print("Nota não encontrada!")
-        
-for nota, tempo in do_scale:
-    tocarNota(nota, tempo)
 
 
+def tocarMusica(nome_musica, bpm=40, altura=2000):
+    for nota, tempo in nome_musica:
+        tocarNota(nota, tempo, altura)
+
+tocarMusica(fly_me_to_the_moon)
 apagar_todos()
 
 
