@@ -29,14 +29,15 @@ Este projeto implementa um sistema para tocar músicas usando um buzzer e LEDs e
     ("nota2", "tempo2"),
     ("nota3", "tempo3"),
     ("nota4", "tempo4")]`
-   ### Exemplo
-   `do_scale = [
-    ("do", "seminima"),<br>
-    ("re", "colcheia"),<br>   
-    ("mi", "colcheia"),   
-    ("fa", "colcheia"),   
-    ("sol", "colcheia"),   
-    ("la", "colcheia"),   
+### Exemplo
+```python
+do_scale = [
+    ("do", "seminima"),
+    ("re", "colcheia"),
+    ("mi", "colcheia"),
+    ("fa", "colcheia"),
+    ("sol", "colcheia"),
+    ("la", "colcheia"),
     ("si", "colcheia"),
     ("DO", "colcheia"),
     ("PAUSE", "semicolcheia"),
@@ -48,7 +49,8 @@ Este projeto implementa um sistema para tocar músicas usando um buzzer e LEDs e
     ("mi", "colcheia"),
     ("re", "colcheia"),
     ("do", "seminima")
-]`
+]
+```
 6. A função tocarMusica é responsável por reproduzir uma sequência de notas com controle de tempo e altura. 
 `def tocarMusica(nome_musica, bpm=40, altura=2000):
   for nota, tempo in nome_musica:
