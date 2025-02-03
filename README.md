@@ -24,16 +24,18 @@ Este projeto implementa um sistema para tocar músicas usando um buzzer e LEDs e
 2. Conecte os LEDs ao pino GPIO 7 e o buzzer ao GPIO 21.
 3. Configure a IDE Thonny para receber a Placa Pi Pico
 4. Tempos definidos:
-   ```python
-   note_durations = {
-    "semibreve": 1,  
-    "minima": 1/2,     
-    "seminima": 1/4, 
-    "colcheia": 1/8, 
-    "semicolcheia": 1/16,
-    "fusa" : 1/32,
-    "semifusa" : 1/64
-}```
+As durações abaixo representam as frações do tempo para cada tipo de nota:
+
+| Nota            | Fração do Tempo |
+|-----------------|-----------------|
+| semibreve       | 1               |
+| minima          | 1/2             |
+| seminima        | 1/4             |
+| colcheia        | 1/8             |
+| semicolcheia    | 1/16            |
+| fusa            | 1/32            |
+| semifusa         | 1/64            |
+
 5. Notas definidas: Clave de Sol
 # Criando o conteúdo para o README e salvando em um arquivo .md
 readme_content = """
@@ -95,7 +97,6 @@ As notas abaixo são organizadas por linha (baixa, intermediária e aguda) e inc
 | Nota   | Frequência (Hz) | Representação     |
 |--------|-----------------|-------------------|
 | PAUSE  | 0.00            | Pausa             |
-"""
 
 6. Defina sua música em um array no formato:
    ```python
