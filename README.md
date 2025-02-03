@@ -24,12 +24,38 @@ Este projeto implementa um sistema para tocar músicas usando um buzzer e LEDs e
 2. Conecte os LEDs ao pino GPIO 7 e o buzzer ao GPIO 21.
 3. Configure a IDE Thonny para receber a Placa Pi Pico
 4. Defina sua música em um array no formato:
-5. A função tocarMusica é responsável por reproduzir uma sequência de notas com controle de tempo e altura.
-   ```python
-def tocarMusica(nome_musica, bpm=40, altura=2000):
+   `nome_da_musica = [
+    ("nota1", "tempo1."),
+    ("nota2", "tempo2"),
+    ("nota3", "tempo3"),
+    ("nota4", "tempo4")]`
+   ### Exemplo
+   `do_scale = [
+    ("do", "seminima"),
+    ("re", "colcheia"),
+    ("mi", "colcheia"),
+    ("fa", "colcheia"),
+    ("sol", "colcheia"),
+    ("la", "colcheia"),
+    ("si", "colcheia"),
+    ("DO", "colcheia"),
+    ("PAUSE", "semicolcheia"),
+    ("DO", "colcheia"),
+    ("si", "colcheia"),
+    ("la", "colcheia"),
+    ("sol", "colcheia"),
+    ("fa", "colcheia"),
+    ("mi", "colcheia"),
+    ("re", "colcheia"),
+    ("do", "seminima")
+]`
+6. A função tocarMusica é responsável por reproduzir uma sequência de notas com controle de tempo e altura. 
+`def tocarMusica(nome_musica, bpm=40, altura=2000):
   for nota, tempo in nome_musica:
-    tocarNota(nota, tempo, altura)
-  ```
+    tocarNota(nota, tempo, altura)`
+- nome_musica: Array contendo as notas da música.
+- bpm (opcional): Controla a velocidade da música. O valor padrão é 40, mas pode ser ajustado conforme necessário.
+- altura (opcional): Define a frequência base das notas. O valor recomendado está entre 500 e 3000.
    
 7. Execute o script e ouça a música enquanto os LEDs acendem!
 
