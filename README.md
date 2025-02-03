@@ -31,12 +31,12 @@ Este projeto implementa um sistema para tocar músicas usando um buzzer e LEDs e
     ("nota4", "tempo4")]`
    ### Exemplo
    `do_scale = [
-    ("do", "seminima"),\n
-    ("re", "colcheia"),
-    ("mi", "colcheia"),
-    ("fa", "colcheia"),
-    ("sol", "colcheia"),
-    ("la", "colcheia"),
+    ("do", "seminima"),   
+    ("re", "colcheia"),   
+    ("mi", "colcheia"),   
+    ("fa", "colcheia"),   
+    ("sol", "colcheia"),   
+    ("la", "colcheia"),   
     ("si", "colcheia"),
     ("DO", "colcheia"),
     ("PAUSE", "semicolcheia"),
