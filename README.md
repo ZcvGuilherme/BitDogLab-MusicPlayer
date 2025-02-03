@@ -37,10 +37,6 @@ As durações abaixo representam as frações do tempo para cada tipo de nota:
 | semifusa         | 1/64            |
 
 5. Notas definidas: Clave de Sol
-# Criando o conteúdo para o README e salvando em um arquivo .md
-readme_content = """
-# Notas Musicais
-
 As notas abaixo são organizadas por linha (baixa, intermediária e aguda) e incluem suas frequências e representações.
 
 ## Linha 1 (Notas mais graves)
@@ -128,7 +124,7 @@ do_scale = [
     ("do", "seminima")
 ]
 ```
-6. A função tocarMusica é responsável por reproduzir uma sequência de notas com controle de tempo e altura. 
+7. A função tocarMusica é responsável por reproduzir uma sequência de notas com controle de tempo e altura. 
 `def tocarMusica(nome_musica, bpm=40, altura=2000):
   for nota, tempo in nome_musica:
     tocarNota(nota, tempo, altura)`
@@ -136,7 +132,7 @@ do_scale = [
 - bpm (opcional): Controla a velocidade da música. O valor padrão é 40, mas pode ser ajustado conforme necessário.
 - altura (opcional): Define a frequência base das notas. O valor recomendado está entre 500 e 3000.
    
-7. Execute o script e ouça a música enquanto os LEDs acendem!
+8. Execute o script e ouça a música enquanto os LEDs acendem!
 
 ## 🎨 Cores e Notas
 Cada nota possui um LED específico com uma cor correspondente para visualização sincronizada.
