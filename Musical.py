@@ -181,11 +181,11 @@ def tocarNota(nota, tempo, bpm=40):
     else:
         print("Nota não encontrada!")
         
-for nota, tempo in fly_me_to_the_moon:
+for nota, tempo in do_scale:
     tocarNota(nota, tempo)
 
 
-
+apagar_todos()
 
 
 
