@@ -2,6 +2,19 @@ from machine import Pin, PWM
 import time
 import neopixel
 
+Super_Mario_Bros = [
+("MI","colcheia"),
+("MI","colcheia"),
+("PAUSE", "colcheia"),
+("MI", "colcheia"),
+("PAUSE", "colcheia"),
+("DO", "colcheia"),
+("MI", "seminima"),
+("SOL", "seminima"),
+("PAUSE", "seminima"),
+("sol","seminima")
+]
+
 megalovania = [
 ("mi","semicolcheia"),
 ("mi","semicolcheia"),
@@ -60,8 +73,6 @@ megalovania = [
 ("PAUSE", "fusa")
 ]
 
-
-
 do_scale = [
     ("do", "seminima"),
     ("re", "colcheia"),
@@ -80,7 +91,6 @@ do_scale = [
     ("mi", "colcheia"),
     ("re", "colcheia"),
     ("do", "seminima")
-
 ]
 
 fly_me_to_the_moon = [
@@ -226,7 +236,7 @@ def acender_led(nota):
         ativarLed(index, rgb)
 
 def tocarNota(nota, tempo):
-    bpm=30
+    bpm=40
     apagar_todos()  # Apaga todos os LEDs
     if nota in notes:
         frequencia = notes[nota]["frequencia"]
@@ -246,7 +256,7 @@ def tocarMusica(nome_musica):
     for nota, tempo in nome_musica:
         tocarNota(nota, tempo)
 
-tocarMusica(megalovania)
+tocarMusica(Super_Mario_Bros)
 apagar_todos()
 
 
