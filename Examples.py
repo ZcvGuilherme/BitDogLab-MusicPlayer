@@ -299,3 +299,64 @@ fly_me_to_the_moon = [
     ("FA", "minima.")    
 ]
 
+Hit_the_Road_Jack_refrao = [
+    ("sol#", "colcheia"), ("la", "colcheia."), ("fa", "semicolcheia"), ("sol", "minima"), ("re", "seminima."),
+    ("re", "colcheia"), ("fa", "colcheia."), ("fa", "semicolcheia"),  ("sol", "seminima"), ("sol", "seminima"), ("fa", "seminima"),
+    ("la", "seminima"), ("la", "seminima"), ("RE", "seminima"), ("RE", "seminima"),
+    ("FA", "seminima"), ("FA", "seminima"), ("RE", "seminima"),
+    
+    ("sol#", "colcheia"), ("la", "colcheia."), ("fa", "semicolcheia"), ("sol", "minima"), ("re", "seminima."),
+    ("re", "colcheia"), ("fa", "colcheia."), ("fa", "semicolcheia"),  ("sol", "seminima"), ("sol", "seminima"), ("fa", "seminima"),
+    ("re", "semibreve"),
+    
+    ("sol#", "colcheia"), ("la", "colcheia."), ("fa", "semicolcheia"), ("sol", "minima"), ("re", "seminima."),
+    ("re", "colcheia"), ("fa", "colcheia."), ("fa", "semicolcheia"),  ("sol", "seminima"), ("sol", "seminima"), ("fa", "seminima"),
+    ("la", "seminima"), ("la", "seminima"), ("RE", "seminima"), ("RE", "seminima"),
+    ("FA", "seminima"), ("FA", "seminima"), ("RE", "seminima"),
+    
+    ("sol#", "colcheia"), ("la", "colcheia."), ("fa", "semicolcheia"), ("sol", "minima"), ("re", "seminima."),
+    ("re", "colcheia"), ("fa", "colcheia."), ("fa", "semicolcheia"),  ("sol", "seminima"), ("sol", "seminima"), ("fa", "seminima"),
+    ("re", "semibreve"),
+]
+
+HtRJ_Estrofe = [
+    ("RE", "seminima"), ("RE", "colcheia."), ("DO", "semicolcheia"), ("la", "seminima"), ("sol", "colcheia."),
+    ("fa", "semicolcheia"), ("sol", "seminima"), ("sol", "colcheia."), ("fa", "semicolcheia"), ("sol", "seminima"),
+    ("la", "seminima"), ("fa", "colcheia."), ("fa", "semicolcheia"), ("sol#", "colcheia."), ("la", "semicolcheia"),
+    ("sol", "seminima"), ("fa", "colcheia"), ("re", "colcheia"), ("re", "colcheia"), ("re", "colcheia"),
+    ("fa", "seminima"), ("re", "colcheia"), ("re", "colcheia"), ("re", "seminima."),
+    
+    ("re", "colcheia"), ("fa", "seminima"),("sol", "seminima"),("sol", "seminima"),("fa", "seminima"),
+    ("sol#", "colcheia"),("la", "seminima."),("la", "seminima."),("fa", "colcheia"),("sol", "colcheia."),
+    ("fa", "semicolcheia"),("sol", "colcheia."),("fa", "semicolcheia"),("sol", "colcheia."),("fa", "semicolcheia"),
+    ("re", "seminima"),("re", "seminima"),("PAUSE", "seminima"),("PAUSE", "seminima")
+]
+("", ""),
+
+Dueto_Flauta1 = [
+    ("sol", "seminima."),("sol", "colcheia"),("la", "colcheia."),("si", "seminima"),("sol", "seminima"),
+    ("la", "seminima"),("fa#", "seminima"),("sol", "minima"),
+    ("PAUSE", "seminima"),
+    
+    ("si", "seminima."),("si", "colcheia"),("DO", "colcheia."),("RE", "seminima"),("si", "seminima"),
+    ("DO", "seminima"),("RE", "seminima"),("si", "minima"),
+    ("PAUSE", "seminima"),
+    
+    ("RE", "colcheia"),("RE", "colcheia"),("RE", "colcheia"),("RE", "colcheia"), ("RE", "seminima"),
+    ("MI", "colcheia"),("RE", "colcheia"),("DO", "seminima"),("RE", "colcheia"),("DO", "colcheia"),("si", "seminima"),
+    ("PAUSE", "seminima"),
+    
+    ("si", "colcheia"),("si", "colcheia"),("si", "colcheia"),("si", "colcheia"),("si", "seminima"),
+    ("DO", "colcheia"),("si", "colcheia"),("la", "seminima"),("si", "colcheia"),("la", "colcheia"), ("sol", "seminima"),
+    ("PAUSE", "seminima"),
+    
+    ("sol", "colcheia"),("sol", "colcheia"),("sol", "colcheia"),("sol", "colcheia"),("sol", "seminima"),
+    ("sol", "colcheia"),("sol", "colcheia"),("re", "seminima"),("re", "seminima"),("sol", "seminima"),
+    ("PAUSE", "seminima"),
+    
+    ("sol", "colcheia"),("sol", "colcheia"),("sol", "colcheia"),("sol", "colcheia"),("sol", "seminima"),
+    ("sol", "colcheia"),("sol", "colcheia"),("re", "seminima"),("re", "seminima"),("sol", "seminima"),
+    ("PAUSE", "seminima"),
+]
+
+

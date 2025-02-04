@@ -123,14 +123,21 @@ def tocarNota(nota, tempo):
     else:
         print("Nota não encontrada!")
 
-
 def tocarMusica(nome_musica):
     for nota, tempo in nome_musica:
         tocarNota(nota, tempo)
-
-for i in range(2):
-    tocarMusica(megalovania_refrao)
-
+        
+Dueto_Flauta1 = [
+    
+    ("sol", "colcheia"),("sol", "colcheia"),("sol", "colcheia"),("sol", "colcheia"),("sol", "seminima"),
+    ("sol", "colcheia"),("sol", "colcheia"),("re", "seminima"),("re", "seminima"),("sol", "seminima"),
+    ("PAUSE", "seminima"),
+    
+    ("sol", "colcheia"),("sol", "colcheia"),("sol", "colcheia"),("sol", "colcheia"),("sol", "seminima"),
+    ("sol", "colcheia"),("sol", "colcheia"),("re", "seminima"),("re", "seminima"),("sol", "seminima"),
+    ("PAUSE", "seminima"),
+]
+tocarMusica(Dueto_Flauta1)
 apagar_todos()
 
 
