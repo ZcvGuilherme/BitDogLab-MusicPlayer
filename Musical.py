@@ -1,155 +1,27 @@
 from machine import Pin, PWM
 import time
 import neopixel
+megalovania_refrao = [
+# Primeira parte
+     ("mi", "semicolcheia"), ("mi", "semicolcheia"), ("MI", "colcheia"), ("si", "colcheia"),("PAUSE", "semicolcheia"),
+     ("la#", "colcheia"), ("la", "colcheia"), ("sol", "colcheia"), ("PAUSE", "fusa"),("mi", "semicolcheia"),
+     ("sol", "semicolcheia"), ("la", "semicolcheia"),("PAUSE", "fusa"),
 
-Super_Mario_Bros = [
-("MI","colcheia"),
-("MI","colcheia"),
-("PAUSE", "colcheia"),
-("MI", "colcheia"),
-("PAUSE", "colcheia"),
-("DO", "colcheia"),
-("MI", "seminima"),
-("SOL", "seminima"),
-("PAUSE", "seminima"),
-("sol","seminima")
+    # Segunda parte
+     ("re", "semicolcheia"), ("re", "semicolcheia"), ("MI", "colcheia"), ("si", "colcheia"),("PAUSE", "semicolcheia"),
+     ("la#", "colcheia"), ("la", "colcheia"), ("sol", "colcheia"), ("PAUSE", "fusa"),("mi", "semicolcheia"),
+     ("sol", "semicolcheia"), ("la", "semicolcheia"),("PAUSE", "fusa"),
+
+    # Terceira parte
+     ("do#", "semicolcheia"), ("do#", "semicolcheia"), ("MI", "colcheia"), ("si", "colcheia"),("PAUSE", "semicolcheia"),
+     ("la#", "colcheia"), ("la", "colcheia"), ("sol", "colcheia"), ("PAUSE", "fusa"),("mi", "semicolcheia"),
+     ("sol", "semicolcheia"), ("la", "semicolcheia"),("PAUSE", "fusa"),
+
+    # Quarta parte
+     ("do", "semicolcheia"), ("do", "semicolcheia"), ("MI", "colcheia"), ("si", "colcheia"),("PAUSE", "semicolcheia"),
+     ("la#", "colcheia"), ("la", "colcheia"), ("sol", "colcheia"), ("PAUSE", "fusa"),("mi", "semicolcheia"),
+     ("sol", "semicolcheia"), ("la", "semicolcheia"),("PAUSE", "fusa")   
 ]
-
-megalovania = [
-("mi","semicolcheia"),
-("mi","semicolcheia"),
-("MI", "colcheia"),
-("si", "colcheia"),
-("PAUSE", "semicolcheia"),
-("la#", "colcheia"),
-("la","colcheia"),
-("sol", "colcheia"),
-("PAUSE", "fusa."),
-("mi","semicolcheia"),
-("sol", "semicolcheia"),
-("la", "semicolcheia"),
-("PAUSE", "fusa"),
-
-("re","semicolcheia"),
-("re","semicolcheia"),
-("MI", "colcheia"),
-("si", "colcheia"),
-("PAUSE", "semicolcheia"),
-("la#", "colcheia"),
-("la","colcheia"),
-("sol", "colcheia"),
-("PAUSE", "fusa."),
-("mi","semicolcheia"),
-("sol", "semicolcheia"),
-("la", "semicolcheia"),
-("PAUSE", "fusa"),
-
-("do#","semicolcheia"),
-("do#","semicolcheia"),
-("MI", "colcheia"),
-("si", "colcheia"),
-("PAUSE", "semicolcheia"),
-("la#", "colcheia"),
-("la","colcheia"),
-("sol", "colcheia"),
-("PAUSE", "fusa."),
-("mi","semicolcheia"),
-("sol", "semicolcheia"),
-("la", "semicolcheia"),
-("PAUSE", "fusa"),
-
-("do","semicolcheia"),
-("do","semicolcheia"),
-("MI", "colcheia"),
-("si", "colcheia"),
-("PAUSE", "semicolcheia"),
-("la#", "colcheia"),
-("la","colcheia"),
-("sol", "colcheia"),
-("PAUSE", "fusa."),
-("mi","semicolcheia"),
-("sol", "semicolcheia"),
-("la", "semicolcheia"),
-("PAUSE", "fusa")
-]
-
-do_scale = [
-    ("do", "seminima"),
-    ("re", "colcheia"),
-    ("mi", "colcheia"),
-    ("fa", "colcheia"),
-    ("sol", "colcheia"),
-    ("la", "colcheia"),
-    ("si", "colcheia"),
-    ("DO", "colcheia"),
-    ("PAUSE", "semicolcheia"),
-    ("DO", "colcheia"),
-    ("si", "colcheia"),
-    ("la", "colcheia"),
-    ("sol", "colcheia"),
-    ("fa", "colcheia"),
-    ("mi", "colcheia"),
-    ("re", "colcheia"),
-    ("do", "seminima")
-]
-
-fly_me_to_the_moon = [
-    ("FA", "seminima."),
-    ("MI", "colcheia"),
-    ("RE", "seminima"),
-    ("DO", "colcheia"),
-    ("la#", "colcheia"),
-    ("la#", "colcheia"),
-    ("PAUSE", "colcheia"),  # Pausa equivalente a `time.sleep(0.08)`
-    ("DO", "seminima"),
-    ("RE", "colcheia"),
-    ("FA", "seminima"),
-    ("MI", "colcheia"),
-    ("MI", "seminima"),
-    ("RE", "seminima"),
-    ("DO", "colcheia"),
-    ("la#", "seminima"),
-    ("la", "semibreve"),
-    ("PAUSE", "colcheia"),  # Pausa equivalente a `time.sleep(0.05)`
-    ("RE", "seminima."),
-    ("DO", "colcheia"),
-    ("la#", "seminima"),
-    ("la", "colcheia"),
-    ("sol", "colcheia"),
-    ("sol", "seminima"),
-    ("la", "seminima"),
-    ("la#", "seminima"),
-    ("RE", "seminima"),
-    ("DO#", "seminima."),
-    ("la#", "colcheia"),
-    ("la", "seminima"),
-    ("sol", "colcheia"),
-    ("fa", "colcheia"),
-    ("fa", "minima."),
-    ("fa#", "seminima"),
-    ("sol", "seminima."),
-    ("RE", "colcheia"),
-    ("RE", "minima"),
-    ("RE", "minima"),
-    ("MI", "seminima"),
-    ("FA", "seminima"),
-    ("DO", "semibreve"),
-    ("DO", "minima"),
-    ("PAUSE", "colcheia"),  # Pausa equivalente a `time.sleep(0.08)`
-    ("mi", "colcheia"),
-    ("fa", "seminima."),
-    ("la#", "colcheia"),
-    ("la#", "minima"),
-    ("la#", "seminima"),
-    ("RE", "minima"),
-    ("DO", "seminima"),
-    ("la#", "seminima."),
-    ("la", "colcheia"),
-    ("la", "minima"),
-    ("la", "semibreve")
-]
-
-
 note_durations = {
     "semibreve": 1,  
     "minima": 1/2,     
@@ -222,7 +94,7 @@ def calcular_tempo(tempo, bpm):
 
 def tocar_buzzer(frequencia, tempo_segundos):
     buzzer.freq(int(frequencia))  
-    buzzer.duty_u16(500)  # MUDE AQUI A ALTURA DA MUSICA VALOR PADRÃO: 32768 
+    buzzer.duty_u16(2000)  # MUDE AQUI A ALTURA DA MUSICA VALOR PADRÃO: 32768 
     time.sleep(tempo_segundos)  
     buzzer.duty_u16(0)
 def ativarLed(index, rgb):
@@ -256,7 +128,9 @@ def tocarMusica(nome_musica):
     for nota, tempo in nome_musica:
         tocarNota(nota, tempo)
 
-tocarMusica(Super_Mario_Bros)
+for i in range(2):
+    tocarMusica(megalovania_refrao)
+
 apagar_todos()
 
 
